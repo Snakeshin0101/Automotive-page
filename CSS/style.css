@@ -1,0 +1,361 @@
+/* Generales */
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   list-style: none;
+   text-decoration: none;
+}
+
+body{
+   font-family: sans-serif;
+   background: #f4f9f9;
+}
+
+/* Cabecera */
+
+.cabecera{
+   width: 100%;
+   height: 50px;
+   display: block;
+   background-color: #101010;
+}
+
+.encabezado_interior{
+   width: 1000px;
+   height: 100%;
+   display: block;
+   margin: 0 auto;
+}
+
+.contenedor_logo{
+   height: 100%;
+   display: table;
+   float: left;
+}
+
+.encabezado_interior img{
+   display: flex;
+   width: 8%;
+   float: left;
+   margin-top: 6px;
+   margin-right: 5px;
+   align-items: center;
+   justify-content: center;
+   
+}
+
+.contenedor_logo h1{
+   color: white;
+   height: 100%;
+   display: table-cell;
+   vertical-align: middle;
+   font-family: 'Orbitron';
+   font-size: 32px;
+}
+
+.contenedor_logo h1 span{
+   font-family: 'Audiowide';
+   color: red;
+}
+
+.navegacion{
+   float: right;
+   height: 100%;
+}
+
+.navegacion li{
+   height: 100%;
+   display: table;
+   float: left;
+   padding: 0px 20px;
+}
+
+.navegacion li:last-child{
+   padding-right: 0;
+}
+
+.navegacion li a{
+   display: table-cell;
+   vertical-align: middle;
+   height: 90%;
+   color: white;
+   text-transform: uppercase;
+   font-size: 16px;
+   letter-spacing: 2px;
+   transition: all 300ms;
+}
+
+.navegacion li a:hover{
+   /* background: white; */
+   color: white;
+   /* border: 1px solid white; */
+   text-decoration: underline;
+   transform: scale(1.3);
+}
+
+/* Contenedor principal generales */
+
+.contenedor{
+   padding: 60px 0;
+   width: 90%;
+   max-width: 1000px;
+   margin: auto;
+   overflow: hidden;
+}
+
+.titulo{
+   color: black;
+   font-size: 30px;
+   text-align: center;
+   margin-bottom: 60px;
+   text-transform: uppercase;
+}
+
+/* Banner */
+
+.banner{
+   width: 100%;
+   height: 500px;
+   background: #FF0099;  /* fallback for old browsers */
+   background: -webkit-linear-gradient(to right, hsla(323, 19%, 24%, 0.424), #FF0099), url(../img/carro4.jpg);  /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(to right, hsla(64, 54%, 90%, 0.288), #ff009965), url(../img/carro4.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   background-size: cover;
+   background-attachment: fixed;
+   position: relative;
+}
+
+.banner > h1{
+   display: flex;
+   width: 100%;
+   height: 430px;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   color: white;
+   font-size: 50px;
+   text-transform: uppercase;
+   
+}
+
+/* Sobre nosotros */
+
+.contenedor_nosotros{
+   display: flex;
+   justify-content: space-evenly;
+}
+
+.mecanico{
+   width: 38%;
+   align-items: center;
+   align-content: center;
+}
+
+.contenido_texto{
+   width: 50%;
+}
+
+.premium{
+   width: 10%;
+   margin-top: 10px;
+   margin-bottom: 10px;
+}
+
+.contenido_texto h3{
+   margin-bottom: 15px;
+}
+
+.contenido_texto h3 span{
+   background: blue;
+   color: white;
+   border-radius: 50%;
+   display: inline-block;
+   text-align: center;
+   width: 27px;
+   height: 29px;
+   padding: 4px;
+   margin-right: 6px;
+   box-shadow: 0 0 6px rgba(0, 0, 0, .7);
+}
+
+.contenido_texto p{
+   padding: 0 0 30px 15px;
+   text-align: justify;
+}
+
+.trabajos{
+   background: #f2f2f2;
+}
+
+.galeria{
+   display: flex;
+   justify-content: space-evenly;
+   flex-wrap: wrap;
+}
+
+.imagenes{
+   width: 24%;
+   margin-bottom: 10px;
+   height: 200px;
+   overflow: hidden;
+   position: relative;
+   cursor: pointer;
+   box-shadow: 0 0 6px rgba(0, 0, 0, .7);
+}
+
+.imagenes > img{
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   display: block;
+}
+
+.hover_galeria{
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   transform: scale(0);
+   background: hsla(273, 91%, 27%, 0.7);
+   transition: transform .5s;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+
+.hover_galeria img{
+   width: 50px;
+   
+}
+
+.hover_galeria p{
+   color: #f2f2f2;
+}
+
+.imagenes:hover .hover_galeria{
+   transform: scale(1);
+}
+
+/* Clientes */
+
+.tarjetas{
+   display: flex;
+   justify-content: space-evenly;
+}
+
+.tarjetas .tarjeta{
+   background: rgba(77, 77, 218, 0.644);
+   display: flex;
+   width: 46%;
+   height: 200px;
+   align-items: center;
+   justify-content: space-evenly;
+   border-radius: 5px;
+   box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.6);
+}
+
+.tarjetas .tarjeta img{
+   width: 100%;
+   height: 100px;
+   object-fit: cover;
+   border: 3px solid #fff;
+   border-radius: 50%;
+   display: block;
+   margin-left: 7px;
+}
+
+.tarjetas > .tarjeta > .contenido_comentarios{   
+   color: white;
+}
+
+.tarjetas  .tarjeta  .contenido_comentarios h4{
+   margin: 10px;
+}
+
+.tarjetas  .tarjeta  .contenido_comentarios p{
+   font-weight: 300;
+   padding-top: 5px;
+   text-align: justify;
+   margin: 10px;
+}
+
+/* Nuestros servicios */
+
+.contenedor_servicios{
+   background: #f2f2f2;
+   padding-bottom: 30px;
+}
+
+.servicio_contenedor{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.servicio-ind{
+   width: 30%;
+   text-align: center;
+}
+
+.servicio-ind img{
+   width: 50%;
+}
+
+.servicio-ind h3{
+   margin: 10px 0;
+}
+
+.servicio-ind p{
+   font-weight: 300;
+   text-align: justify;
+   margin: 10px;
+   padding: 10px;
+}
+
+/* Pie de pagina */
+
+footer{
+   background: #414141;
+   padding: 60px 0 30px 0;
+   margin: auto;
+   overflow: hidden;
+}
+
+.contenedor_piepag{
+   display: flex;
+   width: 90%;
+   justify-content: space-between;
+   margin: auto;
+   padding-bottom: 50px;
+   border-bottom: 1px solid #cccccc;
+}
+
+.contenedor_pie{
+   text-align: center;
+}
+
+.contenedor_pie img{
+   width: 15%;
+}
+
+.contenedor_pie h4{
+   color: white;
+   border-bottom: 3px solid white;
+   padding-bottom: 5px;
+   margin-bottom: 20px;
+}
+
+.contenedor_pie p{
+   display: inline-block;
+   color: white;
+}
+
+
+.titulo_final{
+   text-align: center;
+   color: #9e9797;
+   font-size: 20px;
+   margin: 20px 0 0 0;   
+}
